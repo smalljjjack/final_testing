@@ -19,7 +19,7 @@
     var path = d3.geoPath().projection(projection);
 
     queue()
-      .defer(d3.json, "world.topojson")
+      .defer(d3.json, "world_countries.json")
       .defer(d3.csv, "data/results.csv")
       .await(ready);
 
