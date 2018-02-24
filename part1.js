@@ -26,11 +26,9 @@
     function ready(error, data, results) {
 
       var campaignNumByCountry = {};
-      console.log(data);
-      console.log(results);
-      //population.forEach(function(d) { console.log(d); campaignNumByCountry[d[home_team]] += 1; });
-      //data.features.forEach(function(d) { d.population = campaignNumByCountry[d[home_team]] });
-
+      population.forEach(function(d) { console.log(d); campaignNumByCountry[d[home_team]] += 1; });
+      data.features.forEach(function(d) { d.population = campaignNumByCountry[d[home_team]] });
+      console.log(campaignNumByCountry)
       /*svg.append("g")
         .attr("class", "countries")
         .selectAll("path")
