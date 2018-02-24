@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soccer history from 1950 - 2017</title>
+  </head>
+  <body>
+    <script src ="part1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <div class="part1 row" style="height:100% width:100%">
+      <div class="p1maps col" style = "width:70%">
+        <div class="worldmap"></div>
+        <div class="timeline"></div>
+      </div>
+      <div class="p1barcharts col" style = "width:30%">
+        <div class="p1bar1"></div>
+        <div class="p1bar2"></div>
+        <div class="p1bar3"></div>
+      </div>
+    </div>
+    <script>
+      worldMap();
+    </script>
+  </body>
+</html>
