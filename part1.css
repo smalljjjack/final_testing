@@ -1,0 +1,69 @@
+body .part1{
+  background-color: rgb(237, 238, 239);
+  height: 900px;
+}
+.part1{
+  height: 900px;
+  font-size: 1.5em;
+}
+.highLight{
+  stroke:#56463b;
+  stroke-width : 5;
+  opacity: 0.8;
+}
+.countriesPath{
+
+}
+.normalPath{
+  stroke:white;
+  stroke-width : 1.5;
+  opacity: 0.8;
+}
+.countriesTitle{
+
+}
+.part1 .p1barcharts{
+  background-color: #d7e1f2;
+}
+.p1bar1{
+    border-bottom: 2px solid #6da0f2;
+}
+.p1bar2{
+    border-bottom: 2px solid #6da0f2;
+}
+.barHighLight{
+  fill: #ed6a12;
+  stroke:#7a5439;
+  stroke-width : 3;
+  opacity: 0.8;
+}
+.part1 p{
+  font-size: 18px;
+  margin-top:0px;
+  margin-bottom: 0px;
+  text-align: center;;
+}
+.part1 label{
+  margin-left: 40px;
+  margin-right: 10px;
+}
+.part1 input{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+#selectionDetion{
+  margin-top: 15px;
+}
+.timeline{
+  margin-left: 50px;
+  height:15%
+}
+.part1 button{
+  margin-left: 15px;
+  width: 120px;
+  border-radius: 15px;
+  background-color: #cbd1db;
+}
