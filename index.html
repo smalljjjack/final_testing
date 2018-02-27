@@ -6,46 +6,81 @@
   </head>
   <body>
     <link rel="stylesheet" href="part1.css">
+    <link rel="stylesheet" href="other.css">
     <script src ="part1.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/queue.v1.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
-    <table class="part1" style="width:100%; height:90%">
-      <tr>
-        <th class="p1maps" style = "width:70%">
-          <div class="timeline">
-            <div id="timeSelector">
-              <label>From</label>
-              <input type="text" size="10" id = "timeStart" name="" placeholder="1950">
-              <label>To</label>
-              <input type="text" size="10" id = "timeEnd" name="" placeholder="2017">
+    <div id="nav-scroll">
 
-              <button type="button" id="timeConfirmBTN">Confirm</button>
-              <button type="button" id="timeConfirmBTN2" style="display:none"></button>
-            </div>
-            <div id="selectionDetion">
-              <label id="countyDetail">Select Country : All</label>
-              <label id="yearDetail">Select Year : 1950 - 2017<label>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-light" id="mynavbar">
+          <a class = "navbar-brand" id="my_brand" style="color:#ffffff">Soccer campaign history</a>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link my-navitem" href="#Intro" style="color:#ffffff">Intro</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link my-navitem" href="#worldMapDiv" style="color:#ffffff">Heat Map</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link my-navitem" href="#forceDiv" style="color:#ffffff">WinLose</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link my-navitem" href="#slopeDiv" style="color:#ffffff">Rate</a>
+            </li>
+          </ul>
+        </nav>
 
-          </div>
-          <div class="worldmap" style ="height:85%"></div>
-        </th>
-        <th class="p1barcharts" style = "width:30%">
-          <div class="" style="height:4%"><p>Which tournament were most popular?</p></div>
-          <div class="p1bar1" style="width:100%"></div>
 
-          <div class="" style="height:4%"><p>Who was the most popular away team?</p></div>
-          <div class="p1bar2" style="width:100%"></div>
+      <div class="component" id="Intro">
+        <div class="container introcontainer">
+          <center><h1>Trace soccer campaign hsitory</h1></center>
+        </div>
+      </div>
+      <div class="component" id="worldMapDiv">
+        <div style="height:8%"></div>
+        <table class="part1">
+          <tr>
+            <th class="p1maps" style = "width:70%">
+              <div class="timeline">
+                <div id="timeSelector">
+                  <label>From</label>
+                  <input type="text" size="10" id = "timeStart" name="" placeholder="1950">
+                  <label>To</label>
+                  <input type="text" size="10" id = "timeEnd" name="" placeholder="2017">
 
-          <div class="" style="height:4%"><p>Which year had most campagins?</p></div>
-          <div class="p1bar3" style="width:100%"></div>
-        </th>
-      </tr>
+                  <button type="button" id="timeConfirmBTN">Confirm</button>
+                  <button type="button" id="timeConfirmBTN2" style="display:none"></button>
+                </div>
+                <div id="selectionDetion">
+                  <label id="countyDetail">Select Country : All</label>
+                  <label id="yearDetail">Select Year : 1950 - 2017<label>
+                </div>
 
-    </table>
+              </div>
+              <div class="worldmap"></div>
+            </th>
+            <th class="p1barcharts" style = "width:30%">
+              <div class="" style="height:4%"><p>Which tournament were most popular?</p></div>
+              <div class="p1bar1" style="width:100%"></div>
+
+              <div class="" style="height:4%"><p>Who was the most popular away team?</p></div>
+              <div class="p1bar2" style="width:100%"></div>
+
+              <div class="" style="height:4%"><p>Which year had most campagins?</p></div>
+              <div class="p1bar3" style="width:100%"></div>
+            </th>
+          </tr>
+
+        </table>
+      </div>
+      <div class="component" id="forceDiv"></div>
+      <div class="component" id="slopeDiv"></div>
+    </div>
+
+
 
     <script>
       worldMap();
