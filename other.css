@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(237, 238, 239);
+}
+html, body {
+    height:100%;
+}
+.my-navitem{
+  font-size:1.0em;
+}
+#nav-scroll .component{
+  height: 100%;
+}
+#mynavbar{
+  height:8%;
+  position: fixed;
+  width: 100%;
+  background-color: #b5bfcc;
+}
+#my_brand{
+  font-size:2.5em;
+}
+.my-navitem{
+  color: black;
+  font-size: 1.5em;
+}
+.nav-item a{
+  margin-top: 15px;
+}
+#intro{
+  background-image: url('data/introback.jpg');
+}
+.introcontainer h1{
+  color: white;
+  font-weight: bolder;
+  font-size: 4.5em;
+  padding-top: 200px;
+}
+#worldMapDiv{
+  background-color: #d7e1f2;
+}

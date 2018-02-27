@@ -1,10 +1,10 @@
-body .part1{
-  background-color: rgb(237, 238, 239);
-  height: 900px;
+.component .part1{
+  height: 92%;
+  font-size: 1.3em;
+  width: 100%;
 }
-.part1{
-  height: 900px;
-  font-size: 1.5em;
+.part1 .worldmap{
+  height:85%;
 }
 .highLight{
   stroke:#56463b;
@@ -19,12 +19,7 @@ body .part1{
   stroke-width : 1.5;
   opacity: 0.8;
 }
-.countriesTitle{
 
-}
-.part1 .p1barcharts{
-  background-color: #d7e1f2;
-}
 .p1bar1{
     border-bottom: 2px solid #6da0f2;
 }

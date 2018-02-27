@@ -28,6 +28,25 @@
         "rgb(107, 2, 2)"
       ]);
 
+    var legend = svg.selectAll("g.legend")
+            .data([0, 20, 50, 100, 130, 150, 180, 220, 270, 300, 400])
+            .enter().append("g")
+            .attr("class", "maplegend")
+
+    var legend_width = 25;
+    legend.append("rect").attr("x", function(d,i){return 5 + i*legend_width;})
+    .attr("y", height-70)
+    .attr("width", legend_width)
+    .attr("height", 10)
+    .style("fill", function(d,i){ return color(d)})
+
+    legend.append("text")
+    .attr("x", function(d, i){ return 8 + i*legend_width;})
+    .attr("y", height-50)
+    .data([0, 20, 50, 100, 130, 150, 180, 220, 270, 300, 400])
+    .text(function(d){ return d; })
+    .style("font-size", 10);
+
     var path = d3.geoPath();
 
     var projection = d3.geoMercator()
@@ -152,10 +171,10 @@
     //var format = d3.time.format("%Y-%m-%d");
 
     var margin = {
-      top: 40,
-      right: 50,
-      bottom: 40,
-      left: 50
+      top: 20,
+      right: 30,
+      bottom: 20,
+      left: 30
     };
 
     var height = $(".part1").height()*0.88 / 3 - margin.top - margin.bottom,
